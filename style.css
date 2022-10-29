@@ -68,11 +68,13 @@ body {
   justify-content: center;
   border: 3px solid var(--border-empty);
   transition: 0.4s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .circle.active {
   border-color: var(--border-fill);
-  background-image: linear-gradient(to left, #0f2027, #203a43, #2c5364);
+  background-color: #0a0e1f;
+  color: #fff;
 }
 
 .btn {
@@ -85,6 +87,11 @@ body {
   padding: 8px 30px;
   margin: 5px;
   font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn:hover {
+  background: #203a43;
 }
 
 .btn:active {
