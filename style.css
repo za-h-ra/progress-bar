@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --border-fill: #3498db;
-  --border-empty: #e0e0e0;
+  --border-fill: #0f2027;
+  --border-empty: #e3e7e5;
 }
 
 * {
@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #f6f7fb;
+  background-image: linear-gradient(to bottom, #e5e5be, #003973);
   font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
@@ -72,6 +72,7 @@ body {
 
 .circle.active {
   border-color: var(--border-fill);
+  background-image: linear-gradient(to left, #0f2027, #203a43, #2c5364);
 }
 
 .btn {
