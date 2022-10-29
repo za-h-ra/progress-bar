@@ -5,16 +5,43 @@ const circles = document.querySelectorAll(".circle");
 
 let currentActive = 1;
 
-// EVENT LISTENERS
+// FUNCTIONS
 
+const update = () => {
+  // ADD & REMOVE ACTIVE CLASS
+  circles.forEach((circle, idx) => {
+    if (idx < currentActive) {
+      circle.classList.add("active");
+    } else {
+      circle.classList.remove("active");
+    }
+  });
+
+  // ADD BORDER TO THE ACTIVE STEPS
+  const actives = document.querySelectorAll(".active");
+
+  progress.style.width = `${
+    ((actives.length - 1) / (circles.length - 1)) * 100
+  }%`;
+
+  if (currentActive === 1) {
+    previous.disabled = true;
+  } else if (currentActive === circles.length) {
+    next.disabled = true;
+  } else {
+    previous.disabled = false;
+    next.disabled = false;
+  }
+};
+
+// EVENT LISTENERS
 next.addEventListener("click", () => {
   currentActive++;
 
   if (currentActive > circles.length) {
     currentActive = circles.length;
   }
-
-  console.log(currentActive);
+  update();
 });
 
 previous.addEventListener("click", () => {
@@ -24,5 +51,5 @@ previous.addEventListener("click", () => {
     currentActive = 1;
   }
 
-  console.log(currentActive);
+  update();
 });
