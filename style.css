@@ -90,10 +90,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.btn:hover {
-  background: #203a43;
-}
-
 .btn:active {
   transform: scale(0.98);
 }
