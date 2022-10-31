@@ -102,3 +102,16 @@ body {
   background-color: var(--border-empty);
   cursor: not-allowed;
 }
+
+.complete {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.4s ease-in;
+}
+
+.hide {
+  display: none;
+}
