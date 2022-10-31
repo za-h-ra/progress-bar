@@ -2,6 +2,7 @@ const progress = document.getElementById("progress");
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
 const circles = document.querySelectorAll(".circle");
+const complete = document.querySelector(".complete");
 
 let currentActive = 1;
 
@@ -27,7 +28,9 @@ const update = () => {
   if (currentActive === 1) {
     previous.disabled = true;
   } else if (currentActive === circles.length) {
-    next.disabled = true;
+    next.classList.add("hide");
+    previous.classList.add("hide");
+    complete.classList.remove("hide");
   } else {
     previous.disabled = false;
     next.disabled = false;
